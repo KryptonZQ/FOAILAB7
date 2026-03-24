@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public API Playground</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <header class="app-header">
+        <h1><i class="fa-solid fa-flask"></i> Public API Playground</h1>
+        <p>Explore random data fetched from popular public APIs.</p>
+    </header>
+
+    <main class="dashboard">
+        <!-- Card 1: Dog Finder -->
+        <article class="card" id="card-dog">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-dog"></i> Dog Finder</h2>
+            </div>
+            <div class="card-content" id="content-dog">
+                <div class="placeholder"><i class="fa-solid fa-paw"></i><p>Ready to fetch!</p></div>
+            </div>
+            <div class="card-footer">
+                <button id="btn-dog" class="btn primary"><i class="fa-solid fa-wand-magic-sparkles"></i> Get Dog</button>
+            </div>
+            <div class="loader-overlay hidden" id="load-dog">
+                <div class="spinner"></div>
+            </div>
+        </article>
+
+        <!-- Card 2: Joke Generator -->
+        <article class="card" id="card-joke">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-face-laugh-squint"></i> Joke Generator</h2>
+            </div>
+            <div class="card-content" id="content-joke">
+                <div class="placeholder"><i class="fa-solid fa-masks-theater"></i><p>Let's hear one!</p></div>
+            </div>
+            <div class="card-footer">
+                <button id="btn-joke" class="btn primary"><i class="fa-solid fa-bolt"></i> Get Joke</button>
+            </div>
+            <div class="loader-overlay hidden" id="load-joke">
+                <div class="spinner"></div>
+            </div>
+        </article>
+
+        <!-- Card 3: Random User Profile -->
+        <article class="card" id="card-user">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-user-astronaut"></i> Random User</h2>
+            </div>
+            <div class="card-content" id="content-user">
+                <div class="placeholder"><i class="fa-solid fa-id-card"></i><p>Discover someone new</p></div>
+            </div>
+            <div class="card-footer">
+                <button id="btn-user" class="btn primary"><i class="fa-solid fa-dice"></i> Get User</button>
+            </div>
+            <div class="loader-overlay hidden" id="load-user">
+                <div class="spinner"></div>
+            </div>
+        </article>
+
+        <!-- Card 4: JSONPlaceholder -->
+        <article class="card" id="card-json">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-code"></i> Data Mockup</h2>
+            </div>
+            <div class="card-content" id="content-json">
+                <div class="placeholder"><i class="fa-solid fa-database"></i><p>Fetch random post</p></div>
+            </div>
+            <div class="card-footer">
+                <button id="btn-json" class="btn primary"><i class="fa-solid fa-download"></i> Get Post</button>
+            </div>
+            <div class="loader-overlay hidden" id="load-json">
+                <div class="spinner"></div>
+            </div>
+        </article>
+    </main>
+
+    <!-- App Logic -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
